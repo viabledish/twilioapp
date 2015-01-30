@@ -1,2 +1,2 @@
 require './app'
-run TwilioApp
+run Sinatra::Application
