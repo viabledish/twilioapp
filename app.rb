@@ -1,14 +1,10 @@
+require 'rubygems'
 require 'sinatra'
-require 'builder'
 
-class TwilioApp < Sinatra::Base
-post '/' do 
-  builder do |xml|
-      xml.instruct!
-        xml.Response do
-          xml.Say("Alex,,,you should listen to Abid more often. He knows best.")
-        end
-      end
-    end
-  end
+get '/hello' do
+  response =<<EOF
+<Response>
+  <Say>Hello from moocode</Say>
+</Response>
+EOF
 end
